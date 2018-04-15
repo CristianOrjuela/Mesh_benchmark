@@ -77,10 +77,19 @@ Complete la tabla:
  
  La configuración de esta representación se diseñó gracias a la formación de polígonos de acuerdo a un conjunto de vértices base que conforma la figura y que a través de su iteración componen un cara de la malla poligonal. En esta descripción, cada una de las caras tenía asociada un conjunto de vértices *Face( vertex, vertex, vertex)* y su pintura se realizaba a través del _benginShape()_ y el _endShape()_ donde se establecían los vértices que describían cada cara. Tal como lo muestra la siguiente imagen.
 
-  ![alt align="center"](./imagenes/facevertex.PNG)
+  ![alt](./imagenes/facevertex.PNG)
+  
+ ### Vertex vertex  
+ 
+ Esta representación se basó en el diseño e implementación de solamente los vértices que componen la malla poligonal. En ese sentido, a través de la función _vertex()_ se configura paso a paso la estructura dando lugar a una representación de la forma VertexVertex. Un
+ejemplo claro es como lo muestra la siguiente figura, donde el vértice *e* hace parte de la representación y tiene asociadas dos conexiones _edges_ y que tienen como destino dos ejes finales señalados en rojo en la imagen.
+
+ ![alt](./imagenes/vertexvertex.PNG)
 
 2. Demo.
 
 3. Resultados (benchmark).
 
 4. Conclusiones.
+
+
