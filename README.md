@@ -60,15 +60,15 @@ Complete la tabla:
  
  Este prototipo fue diseñado en el programa de Blender con el propósito de poder realizar configuraciones particulares y generar una representación más real de lo que es un *Boid*. Inicialmente, se realizó una estructura que tenía como base del diseño los cubos, como se expone en la siguiente imagen:
  
-  ![alt](./imagenes/boidcubes.png)
+  ![alt](./imagenes/boidcubes.PNG)
  
  Y que cuando cuenta con textura, se logra visualizar de la siguiente manera.
  
- ![alt](./imagenes/boidcubestexture.png)
+ ![alt](./imagenes/boidcubestexture.PNG)
  
  Pero luego, se realizó una modificación en la estructura para realizar la presentación VertexVertex, migrando los diseños de cubos a tetraedros. 
  
-  ![alt](./imagenes/boidtetrahedron.png)
+  ![alt](./imagenes/boidtetrahedron.PNG)
  
  De esta manera, se logró incluir dentro de la representación de mallas poligonales una versión del Boid de mayor complejidad, contando con 120 vértices y 234 caras (faces). Asimismo, a través de cálculos y variaciones se lograron identificar cada uno de los vértices y caras de la malla para realizar las posteriores implementaciones. 
 
@@ -76,7 +76,7 @@ Complete la tabla:
  
  La configuración de esta representación se diseñó gracias a la formación de polígonos de acuerdo a un conjunto de vértices base que conforma la figura y que a través de su iteración componen un cara de la malla poligonal. En esta descripción, cada una de las caras tenía asociada un conjunto de vértices *Face( vertex, vertex, vertex)* y su pintura se realizaba a través del _benginShape()_ y el _endShape()_ donde se establecían los vértices que describían cada cara. Tal como lo muestra la siguiente imagen.
 
-  ![alt](./imagenes/boidtetrahedron.png)
+  ![alt](./imagenes/boidtetrahedron.PNG)
 
 2. Demo.
 
