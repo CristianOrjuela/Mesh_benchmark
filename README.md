@@ -39,7 +39,8 @@ Complete la tabla:
 
 | Integrante | github nick |
 |------------|-------------|
-|            |             |
+| Sebastian David Moreno  | sdmorenob |
+| Cristian Camilo Orjuela | CristianOrjuela |
 
 ## Entrega
 
@@ -58,7 +59,7 @@ Complete la tabla:
  
  Durante la valoración de diferentes alternativas para realizar la representación de las mallas poligonales se consideraron algunos factores importantes tal como la complejidad de las visualizaciones y su implementación en la práctica. Por esta razón, y para observar de mejor manera la aplicación de la malla, se diseñó un prototipo de Boid con una gran cantidad de vértices y caras con el fin de especificar el modelo y visualizar en mayor medida su representación.
  
- Este prototipo fue diseñado en el programa de Blender con el propósito de poder realizar configuraciones particulares y generar una representación más real de lo que es un *Boid*. Inicialmente, se realizó una estructura que tenía como base del diseño los cubos, como se expone en la siguiente imagen:
+ Este prototipo fue diseñado en el programa de Blender con el propósito de poder realizar configuraciones particulares y generar una representación más real de lo que es un *Boid*. Inicialmente, se realizó una estructura que tenía como base una estructura a partir de cubos, como se expone en la siguiente imagen:
  
   ![alt](./imagenes/boidcubes.PNG)
  
@@ -76,7 +77,7 @@ Complete la tabla:
  
  La configuración de esta representación se diseñó gracias a la formación de polígonos de acuerdo a un conjunto de vértices base que conforma la figura y que a través de su iteración componen un cara de la malla poligonal. En esta descripción, cada una de las caras tenía asociada un conjunto de vértices *Face( vertex, vertex, vertex)* y su pintura se realizaba a través del _benginShape()_ y el _endShape()_ donde se establecían los vértices que describían cada cara. Tal como lo muestra la siguiente imagen.
 
-  ![alt](./imagenes/boidtetrahedron.PNG)
+  ![alt align="center"](./imagenes/facevertex.PNG)
 
 2. Demo.
 
