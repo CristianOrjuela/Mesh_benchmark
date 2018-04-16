@@ -51,9 +51,17 @@ Complete la tabla:
   3. Resultados (benchmark).
   4. Conclusiones.
   
+##Funcionalidades adicionales
+  
+| Nombre                        | Tecla |
+|-------------------------------|-------|
+| Modo retenido - Modo inmediato| 'r'   |
+| FaceVertex  -  VertexVertex | 'f'   |
+  
+  
 ## Discusión
 
-1. Representaciones estudiadas.
+1. Representaciones estudiadas:
 
  ### Representaciones
  
@@ -82,14 +90,67 @@ Complete la tabla:
  ### Vertex vertex  
  
  Esta representación se basó en el diseño e implementación de solamente los vértices que componen la malla poligonal. En ese sentido, a través de la función _vertex()_ se configura paso a paso la estructura dando lugar a una representación de la forma VertexVertex. Un
-ejemplo claro es como lo muestra la siguiente figura, donde el vértice *e* hace parte de la representación y tiene asociadas dos conexiones _edges_ y que tienen como destino dos ejes finales señalados en rojo en la imagen.
+ejemplo claro es como lo muestra la siguiente figura, donde el vértice *e* hace parte de la representación y tiene asociadas dos conexiones _edges_ que tienen como destino dos ejes finales señalados en naranja en la imagen.
 
  ![alt](./imagenes/vertexvertex.PNG)
 
 2. Demo.
 
+La interacción real con el programa funciona a partir de la modificación de los modos y el tipo de representación que el usuario desea. Por ejemplo, durante la ejecución del modo inmediato, 
+se puede visualizar la siguiente representación.
+
+### Modo inmediato
+
+	![alt](./imagenes/modoinmediato.PNG)
+
+### Modo retenido
+
+	![alt](./imagenes/modoretenido.PNG)
+
 3. Resultados (benchmark).
 
+La construcción de una comparativa entre las diferentes configuraciones de hardware, los modos y las representaciones se identifica a través de la 
+representación gráfica de los factores (fps) frames por segundo y la transición en el tiempo. Como primer medida, se realiza la comparativa en una
+configuración de hardware con las siguientes características: 
+
+- Configuración No. 1:
+
+	* Procesador: AMD A6-5200 - Radeon(HD) Graphics - 2,00GHz
+	* Memoria RAM: 4,00 GB
+	
+	###Resultados
+	
+	*Modo inmediato vs No. Boids
+	
+	![alt](./imagenes/image1.PNG)
+			
+		
+- Configuración No. 2:
+
+	* Procesador: IntelCore i7-4702MQ - 2,00GHz
+	* Memoria RAM: 12,00 GB
+	
+    ###Resultados
+	
+	*Modo inmediato vs No. Boids
+	
+	![alt](./imagenes/image1.PNG)
+	
+
 4. Conclusiones.
+
+##Referencias
+
+- [Mallas poligonales - Processing] (ftp://nozdr.ru/biblio/kolxo3/Cs/CsCg/Botsch%20M.,%20et%20al.%20Polygon%20mesh%20processing%20(AK%20Peters,%202010)(ISBN%201568814267)(C)(O)(243s)_CsCg_.pdf) 
+
+- [Mallas poligonales 2 ] (https://en.wikipedia.org/wiki/Polygon_mesh)
+ 
+- [Conceptualización FaceVertex - VertexVertex ]( http://www.enseignement.polytechnique.fr/informatique/INF562/Slides/MeshDataStructures.pdf )
+
+- [FaceVertex Meshes](http://www.pathengine.com/Contents/ProgrammersGuide/WorldRepresentation/2DContentProcessing/FaceVertexMeshes/page.php )
+
+- [ Conceptos y representaciones ](  http://lgg.epfl.ch/publications/2008/botsch_2008_GMPeg.pdf )
+
+- [ Especificaciones de las representaciones ] (https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-polygon-mesh) 
 
 
