@@ -56,7 +56,7 @@ Complete la tabla:
 | Nombre                        | Tecla |
 |-------------------------------|-------|
 | Modo retenido - Modo inmediato|   r   |
-| FaceVertex  -  VertexVertex   |   f   |
+| FaceVertex  -  EdgeVertex   |   f   |
   
   
 ## Discusión
@@ -75,24 +75,33 @@ Complete la tabla:
  
  ![alt](./imagenes/boidcubestexture.PNG)
  
- Pero luego, se realizó una modificación en la estructura para realizar la presentación VertexVertex, migrando los diseños de cubos a tetraedros. 
+ Pero luego, se realizó una modificación en la estructura para realizar la presentación EdgeVertex y VertexVertex, migrando los diseños de cubos a tetraedros. 
  
   ![alt](./imagenes/boidtetrahedron.PNG)
  
  De esta manera, se logró incluir dentro de la representación de mallas poligonales una versión del Boid de mayor complejidad, contando con 120 vértices y 234 caras (faces). Asimismo, a través de cálculos y variaciones se lograron identificar cada uno de los vértices y caras de la malla para realizar las posteriores implementaciones. 
 
- ##### Face Vertex
+ #### Face-Vertex
  
  La configuración de esta representación se diseñó gracias a la formación de polígonos de acuerdo a un conjunto de vértices base que conforma la figura y que a través de su iteración componen un cara de la malla poligonal. En esta descripción, cada una de las caras tenía asociada un conjunto de vértices *Face( vertex, vertex, vertex)* y su pintura se realizaba a través del _benginShape()_ y el _endShape()_ donde se establecían los vértices que describían cada cara. Tal como lo muestra la siguiente imagen.
 
   ![alt](./imagenes/facevertex.PNG)
   
- ##### Vertex vertex  
+ #### Vertex-vertex  
  
- Esta representación se basó en el diseño e implementación de solamente los vértices que componen la malla poligonal. En ese sentido, a través de la función _vertex()_ se configura paso a paso la estructura dando lugar a una representación de la forma VertexVertex. Un
+ Esta representación se basó en el diseño e implementación de solamente los vértices que componen la malla poligonal. En ese sentido, a través de la función _vertex()_ se configura paso a paso con la estructura dando lugar a una representación de la forma VertexVertex. Un
 ejemplo claro es como lo muestra la siguiente figura, donde el vértice *e* hace parte de la representación y tiene asociadas dos conexiones _edges_ que tienen como destino dos ejes finales señalados en naranja en la imagen.
 
  ![alt](./imagenes/vertexvertex.PNG)
+ 
+ 
+ #### Edge-vertex
+ 
+ Asimismo, mediante algunos cálculos y desarrollos se estructuró la representación EdgeVertex mediante la cual hay una unión de dos vértices que representan un _edge_ o _eje_ y los posibles vértices que están asociados a esta representación. Además, 
+ se tiene en cuenta que una representación a partir de un vértice, configura un sistema EdgeVertex tal como lo muestra la siguiente imagen.
+ 
+ ![alt](./imagenes/edgevertex.jpg)
+ 
 
 2. Demo.
 
@@ -163,6 +172,8 @@ de aplicarse de la manera más seria, como se observa en la representación del 
 ## Referencias
 
 - [Mallas poligonales - Processing](nozdr.ru/biblio/kolxo3/Cs/CsCg/Botsch%20M.,%20et%20al.%20Polygon%20mesh%20processing%20(AK%20Peters,%202010)(ISBN%201568814267)(C)(O)(243s)_CsCg_.pdf) 
+
+- [Representaciones ... (Edge-Vertex)](https://pdfs.semanticscholar.org/presentation/4702/f55e2d128c65169365e178d01ed3a01ecf61.pdf)
 
 - [Mallas poligonales 2 ](https://en.wikipedia.org/wiki/Polygon_mesh)
  
