@@ -99,13 +99,9 @@ ejemplo claro es como lo muestra la siguiente figura, donde el vértice *e* hace
 La interacción real con el programa funciona a partir de la modificación de los modos y el tipo de representación que el usuario desea. Por ejemplo, durante la ejecución del modo inmediato, 
 se puede visualizar la siguiente representación.
 
-### Modo inmediato
+![alt](./imagenes/modoinmediato1.PNG)
 
-	![alt](./imagenes/modoinmediato1.PNG)
-
-### Modo retenido
-
-	![alt](./imagenes/modoretenido1.PNG)
+![alt](./imagenes/modoretenido1.PNG)
 
 3. Resultados (benchmark).
 
