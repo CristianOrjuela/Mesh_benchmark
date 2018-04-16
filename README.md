@@ -101,11 +101,11 @@ se puede visualizar la siguiente representación.
 
 ### Modo inmediato
 
-	![alt](./imagenes/modoinmediato.PNG)
+	![alt](./imagenes/modoinmediato1.PNG)
 
 ### Modo retenido
 
-	![alt](./imagenes/modoretenido.PNG)
+	![alt](./imagenes/modoretenido1.PNG)
 
 3. Resultados (benchmark).
 
