@@ -96,10 +96,16 @@ ejemplo claro es como lo muestra la siguiente figura, donde el vértice *e* hace
 
 2. Demo.
 
+
+![alt text](./imagenes/gif1.gif)
+
+
 La interacción real con el programa funciona a partir de la modificación de los modos y el tipo de representación que el usuario desea. Por ejemplo, durante la ejecución del modo inmediato, 
-se puede visualizar la siguiente representación.
+se puede visualizar la siguiente representación. Por ejemplo, una muestra del modo inmediato.
 
 ![alt](./imagenes/modoinmediato1.PNG)
+
+O también, una figura del modo retenido.
 
 ![alt](./imagenes/modoretenido1.PNG)
 
@@ -117,7 +123,11 @@ configuración de hardware con las siguientes características:
 	** Modo inmediato vs No. Boids
 	
 	![alt](./imagenes/image1.PNG)
-			
+	
+	** Modo Inmediato vs Modo Retenido
+	
+	![alt](./imagenes/image11.PNG)
+				
 		
 - Configuración No. 2:
 
@@ -129,8 +139,26 @@ configuración de hardware con las siguientes características:
 	
 	![alt](./imagenes/image2.PNG)
 	
+	** Modo Inmediato vs Modo Retenido
+	
+	![alt](./imagenes/image22.PNG)
+	
+	
+- Comparativa configuraciones:
 
+	![alt](./imagenes/image3.PNG)
+	
 4. Conclusiones.
+
+- La representación de la mallas poligonales tienen una gran cantidad de usos y aplicaciones, en este caso concreto, la visualización de un objeto a partir
+de su estructuración con simples polígonos (triángulos, cuadrados). 
+
+- Existen grandes variaciones en las representaciones cuando varían noablemente las configuraciones de hardware, es decir, que hay una mayor cantidad de _frames por segundo (fps)_ cuando se cuentan
+con mejores recursos.
+
+- Además, es bastante curioso que algunas nociones en la teoría deban representar una parametrización determinada y en la práctica estos conceptos no terminan
+de aplicarse de la manera más seria, como se observa en la representación del modo inmediato y el modo retenido.
+
 
 ## Referencias
 
