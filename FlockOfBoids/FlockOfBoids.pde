@@ -44,7 +44,7 @@ ArrayList<Boid> flock;
 Node avatar;
 boolean animate = true;
 boolean retainedMode = false;
-boolean faceVertex = FACE_VERTEX;
+int representation = 1;
 
 void setup() {
   size(1000, 720, P3D);
@@ -61,7 +61,6 @@ void setup() {
   flock = new ArrayList();
   for (int i = 0; i < initBoidNum; i++)
     flock.add(new Boid(new Vector(flockWidth / 2, flockHeight / 2, flockDepth / 2)));
-  
 }
 
 void draw() {
@@ -71,22 +70,6 @@ void draw() {
   walls();
   // Calls Node.visit() on all scene nodes.
   scene.traverse();
-  fill(255, 0, 255);
-  textSize(52);
-  if (retainedMode){
-    text("Retained", -750, -400); 
-  }else{  
-    text("Inmediate", -750, -400); 
-  }
-  
-  if(faceVertex){
-    text("Face-Vertex", -400, -400); 
-  }else{
-    text("Vertex-Vertex", -400, -400); 
-  }
-  
-  
-  
 }
 
 void walls() {
@@ -133,11 +116,13 @@ void keyPressed() {
     mode = mode < 3 ? mode+1 : 0;
     break;
   case 'r':
-   
     retainedMode = !retainedMode; 
     break;
   case 'f':
-    faceVertex = !faceVertex;
+    if( representation < 2 )
+      representation++;
+    else
+      representation = 0;
     break;
   case ' ':
     if (scene.eye().reference() != null) {

@@ -56,7 +56,7 @@ Complete la tabla:
 | Nombre                        | Tecla |
 |-------------------------------|-------|
 | Modo retenido - Modo inmediato|   r   |
-| FaceVertex  -  EdgeVertex   |   f   |
+| FaceVertex  -  VertexVertex - EdgeVertex  |   f   |
   
   
 ## Discusión
@@ -103,6 +103,8 @@ ejemplo claro es como lo muestra la siguiente figura, donde el vértice *e* hace
  ![alt](./imagenes/edgevertex.jpg)
  
 
+
+ 
 2. Demo.
 
 
