@@ -51,19 +51,19 @@ Complete la tabla:
   3. Resultados (benchmark).
   4. Conclusiones.
   
-##Funcionalidades adicionales
+## Funcionalidades adicionales
   
 | Nombre                        | Tecla |
 |-------------------------------|-------|
-| Modo retenido - Modo inmediato| 'r'   |
-| FaceVertex  -  VertexVertex | 'f'   |
+| Modo retenido - Modo inmediato|   r   |
+| FaceVertex  -  VertexVertex   |   f   |
   
   
 ## Discusión
 
-1. Representaciones estudiadas:
+###  Representaciones estudiadas:
 
- ### Representaciones
+#### Representaciones
  
  Durante la valoración de diferentes alternativas para realizar la representación de las mallas poligonales se consideraron algunos factores importantes tal como la complejidad de las visualizaciones y su implementación en la práctica. Por esta razón, y para observar de mejor manera la aplicación de la malla, se diseñó un prototipo de Boid con una gran cantidad de vértices y caras con el fin de especificar el modelo y visualizar en mayor medida su representación.
  
@@ -81,13 +81,13 @@ Complete la tabla:
  
  De esta manera, se logró incluir dentro de la representación de mallas poligonales una versión del Boid de mayor complejidad, contando con 120 vértices y 234 caras (faces). Asimismo, a través de cálculos y variaciones se lograron identificar cada uno de los vértices y caras de la malla para realizar las posteriores implementaciones. 
 
- ### Face Vertex
+ ##### Face Vertex
  
  La configuración de esta representación se diseñó gracias a la formación de polígonos de acuerdo a un conjunto de vértices base que conforma la figura y que a través de su iteración componen un cara de la malla poligonal. En esta descripción, cada una de las caras tenía asociada un conjunto de vértices *Face( vertex, vertex, vertex)* y su pintura se realizaba a través del _benginShape()_ y el _endShape()_ donde se establecían los vértices que describían cada cara. Tal como lo muestra la siguiente imagen.
 
   ![alt](./imagenes/facevertex.PNG)
   
- ### Vertex vertex  
+ ##### Vertex vertex  
  
  Esta representación se basó en el diseño e implementación de solamente los vértices que componen la malla poligonal. En ese sentido, a través de la función _vertex()_ se configura paso a paso la estructura dando lugar a una representación de la forma VertexVertex. Un
 ejemplo claro es como lo muestra la siguiente figura, donde el vértice *e* hace parte de la representación y tiene asociadas dos conexiones _edges_ que tienen como destino dos ejes finales señalados en naranja en la imagen.
@@ -118,9 +118,7 @@ configuración de hardware con las siguientes características:
 	* Procesador: AMD A6-5200 - Radeon(HD) Graphics - 2,00GHz
 	* Memoria RAM: 4,00 GB
 	
-	###Resultados
-	
-	*Modo inmediato vs No. Boids
+	** Modo inmediato vs No. Boids
 	
 	![alt](./imagenes/image1.PNG)
 			
@@ -130,27 +128,26 @@ configuración de hardware con las siguientes características:
 	* Procesador: IntelCore i7-4702MQ - 2,00GHz
 	* Memoria RAM: 12,00 GB
 	
-    ###Resultados
 	
-	*Modo inmediato vs No. Boids
+	** Modo inmediato vs No. Boids
 	
-	![alt](./imagenes/image1.PNG)
+	![alt](./imagenes/image2.PNG)
 	
 
 4. Conclusiones.
 
-##Referencias
+## Referencias
 
-- [Mallas poligonales - Processing] (ftp://nozdr.ru/biblio/kolxo3/Cs/CsCg/Botsch%20M.,%20et%20al.%20Polygon%20mesh%20processing%20(AK%20Peters,%202010)(ISBN%201568814267)(C)(O)(243s)_CsCg_.pdf) 
+- [Mallas poligonales - Processing](nozdr.ru/biblio/kolxo3/Cs/CsCg/Botsch%20M.,%20et%20al.%20Polygon%20mesh%20processing%20(AK%20Peters,%202010)(ISBN%201568814267)(C)(O)(243s)_CsCg_.pdf) 
 
-- [Mallas poligonales 2 ] (https://en.wikipedia.org/wiki/Polygon_mesh)
+- [Mallas poligonales 2 ](https://en.wikipedia.org/wiki/Polygon_mesh)
  
-- [Conceptualización FaceVertex - VertexVertex ]( http://www.enseignement.polytechnique.fr/informatique/INF562/Slides/MeshDataStructures.pdf )
+- [Conceptualización FaceVertex - VertexVertex ](http://www.enseignement.polytechnique.fr/informatique/INF562/Slides/MeshDataStructures.pdf )
 
 - [FaceVertex Meshes](http://www.pathengine.com/Contents/ProgrammersGuide/WorldRepresentation/2DContentProcessing/FaceVertexMeshes/page.php )
 
-- [ Conceptos y representaciones ](  http://lgg.epfl.ch/publications/2008/botsch_2008_GMPeg.pdf )
+- [ Conceptos y representaciones ](http://lgg.epfl.ch/publications/2008/botsch_2008_GMPeg.pdf )
 
-- [ Especificaciones de las representaciones ] (https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-polygon-mesh) 
+- [ Especificaciones de las representaciones ](https://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-polygon-mesh) 
 
 
