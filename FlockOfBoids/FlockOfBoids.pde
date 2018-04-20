@@ -39,12 +39,12 @@ boolean avoidWalls = true;
 // 3. Only points
 int mode;
 
-int initBoidNum = 10; // amount of boids to start the program with
+int initBoidNum = 100; // amount of boids to start the program with
 ArrayList<Boid> flock;
 Node avatar;
 boolean animate = true;
-boolean retainedMode = false;
-int representation = 1;
+boolean retainedMode = true;
+int representation = 0;
 
 void setup() {
   size(1000, 720, P3D);
@@ -70,6 +70,23 @@ void draw() {
   walls();
   // Calls Node.visit() on all scene nodes.
   scene.traverse();
+  textSize(40);
+  fill(255, 0, 125);
+  if (retainedMode){
+    text("RETAINED", -650, -350);
+  }else{
+    text("INMEDIATE", -650, -350);
+  }
+  if (representation == 0){
+    text("FaceVertex", -400, -350);
+  }else if(representation == 1){
+    text("VertexVertex", -400, -350);
+  }else{
+    text("EdgeVertex", -400, -350);
+  }
+  
+  text( frameRate, 0, -350);
+  
 }
 
 void walls() {

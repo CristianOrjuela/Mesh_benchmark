@@ -16,8 +16,8 @@ class Boid {
   float[][] vertex;
   int[][] faces;
   // PShape for retained mode
-  PShape[] shapeFV;
-  PShape[] shapeVV;
+  PShape shapeFV;
+  PShape shapeVV;
   HashMap graph;
   HashMap colorVertex;
 
@@ -163,31 +163,27 @@ class Boid {
 
   void retainedMode(){
     // Create the polygon mesh in retained mode with vertex-vertex representation
-    shapeVV = new PShape[load.vertexSize()];
+    shapeVV = createShape( );
+    shapeVV.beginShape( TRIANGLE_STRIP );
     for( int i = 0; i < load.vertexSize( ); i++){
-      shapeVV[i] = createShape(  );
-    }
-    for( int i = 0; i < load.vertexSize( ); i++){
-      
       visitorRetained( 0, (HashMap) graph.get( 0 ) );
-      
-      shapeVV[i].setFill( color( 255, 0, 0, 125 ) );
-      shapeVV[i].setStroke( color( 0, 255, 0 ) );
-      shapeVV[i].setStrokeWeight( 2 );
     }
+    shapeVV.endShape( );
+    shapeVV.setFill( color( 255, 0, 0, 125 ) );
+    shapeVV.setStroke( color( 0, 255, 0 ) );
+    shapeVV.setStrokeWeight( 2 );
     // Create the polygon mesh in retained mode with face-vertex representation
-    shapeFV = new PShape[load.facesSize()];
+    shapeFV = createShape( );
+    shapeFV.beginShape( TRIANGLE );
     for( int i = 0; i < load.facesSize( ); i++ ){
-      shapeFV[i] = createShape( );
-      shapeFV[i].beginShape( );
       for( int j = 0; j < 3; j++ ){
-        shapeFV[i].vertex( vertex[faces[i][j]][0] * sc, vertex[faces[i][j]][1] * sc, vertex[faces[i][j]][2] * sc );
+        shapeFV.vertex( vertex[faces[i][j]][0] * sc, vertex[faces[i][j]][1] * sc, vertex[faces[i][j]][2] * sc );
       }
-      shapeFV[i].endShape( );
-      shapeFV[i].setFill( color( 255, 0, 0, 125 ) );
-      shapeFV[i].setStroke( color( 0, 255, 0 ) );
-      shapeFV[i].setStrokeWeight( 2 );
     }
+    shapeFV.endShape( );
+    shapeFV.setFill( color( 255, 0, 0, 125 ) );
+    shapeFV.setStroke( color( 0, 255, 0 ) );
+    shapeFV.setStrokeWeight( 2 );
   }
 
   void graph( ){
@@ -258,8 +254,7 @@ class Boid {
   void faceVertex(  ){
 
     if( retainedMode ){
-      for( int i = 0; i < load.facesSize( ); i++ )
-        shape( shapeFV[i] );
+      shape( shapeFV );
     }else{
       for( int i = 0; i < load.facesSize( ); i++ ){
         beginShape( );
@@ -289,8 +284,7 @@ class Boid {
   void vertexVertex( ){
 
     if( retainedMode ){
-      for( int i = 0; i < load.facesSize( ); i++ )
-        shape( shapeFV[i] );
+      shape( shapeFV );
     }else{
       beginShape( TRIANGLE_STRIP );
       visitor( 0, (HashMap) graph.get( 0 ) );
@@ -319,16 +313,14 @@ class Boid {
   void visitorRetained( int key, HashMap node ){
     colorVertex.replace( key, "g" );
     Integer[] nodes = (Integer[])((node.keySet( )).toArray( new Integer[0] ));
-    shapeVV[key].beginShape( TRIANGLE_STRIP );
     for( int i = 0; i < nodes.length; i++ ){;
       if( colorVertex.get( nodes[i] ).equals( "b" ) ){
-        shapeVV[key].vertex( vertex[nodes[i]][0] * sc, vertex[nodes[i]][1] * sc, vertex[nodes[i]][2] * sc );
-        shapeVV[key].vertex( vertex[key][0] * sc, vertex[key][1] * sc, vertex[key][2] * sc );
+        shapeVV.vertex( vertex[nodes[i]][0] * sc, vertex[nodes[i]][1] * sc, vertex[nodes[i]][2] * sc );
+        shapeVV.vertex( vertex[key][0] * sc, vertex[key][1] * sc, vertex[key][2] * sc );
       }else if( colorVertex.get( nodes[i] ).equals( "w" ) ){
         visitor( nodes[i], (HashMap) graph.get( nodes[i] ) );
       }
     }
-    shapeVV[key].endShape( );
     colorVertex.replace( key, "b" );
   }
 
